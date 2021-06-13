@@ -29,7 +29,7 @@ def connect_to_endpoint(url, headers, params):
 def main():
     headers = create_headers(bearer_token)
     json_response = connect_to_endpoint(search_url, headers, query_params)
-    print(json.dumps(json_response, indent=4, sort_keys=True))
+    print(json.dumps(json_response, ensure_ascii=False, indent=4, sort_keys=True))
 
 
 if __name__ == "__main__":
